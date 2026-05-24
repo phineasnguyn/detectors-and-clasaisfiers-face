@@ -36,12 +36,23 @@ pip install -r requirements.txt
 
 ### 3. Chuẩn bị mô hình (Models)
 
-Hệ thống cần các mô hình học máy đã được huấn luyện để phân loại. Đặt các tệp mô hình vào thư mục `models/` ở gốc thư mục dự án:
-- `models/cnn_model.h5` (hoặc `.keras`)
-- `models/svm_model.pkl`
-- `models/rf_model.pkl`
+Hệ thống cần các mô hình học máy đã được huấn luyện để phân loại. Do kích thước file lớn, các mô hình này không được tải trực tiếp lên mã nguồn. Bạn có thể lấy mô hình bằng một trong hai cách sau:
 
-*(Nếu thiếu mô hình, hệ thống sẽ cảnh báo trên giao diện. Các mô hình phát hiện khuôn mặt của OpenCV DNN sẽ tự động được tải xuống trong lần chạy đầu tiên).*
+#### Cách A: Tải mô hình đã được huấn luyện sẵn (Pre-trained)
+1. Truy cập vào mục **[Releases](https://github.com/phineasnguyn/detectors-and-clasaisfiers-face/releases)** của kho lưu trữ này (nếu tác giả đã cung cấp).
+2. Tải xuống các file mô hình và đặt chúng vào thư mục `models/` ở gốc thư mục dự án:
+   - `cnn_model.h5` (hoặc `.keras`)
+   - `svm_model.pkl`
+   - `rf_model.pkl`
+
+#### Cách B: Tự huấn luyện (Train) mô hình
+1. Mở file `hoanggiamanh-nhom21-detectedfaceandclassification.ipynb` bằng Jupyter Notebook hoặc Google Colab.
+2. Chuẩn bị dataset (chia thư mục `with_mask` và `without_mask`).
+3. Chạy toàn bộ các ô lệnh (cells) trong Notebook để tiến hành huấn luyện.
+4. Sau khi huấn luyện hoàn tất, chạy file `save_models.py` hoặc các ô lệnh lưu model cuối cùng để xuất ra các file `.h5` và `.pkl`.
+5. Đưa các file xuất ra vào thư mục `models/`.
+
+*(Lưu ý: Nếu thiếu mô hình, hệ thống sẽ cảnh báo trên giao diện. Các file của mô hình phát hiện khuôn mặt OpenCV DNN sẽ tự động được tải xuống trong lần chạy đầu tiên).*
 
 ---
 
