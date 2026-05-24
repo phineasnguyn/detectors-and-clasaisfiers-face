@@ -46,7 +46,7 @@ Hệ thống cần các mô hình học máy đã được huấn luyện để 
    - `rf_model.pkl`
 
 #### Cách B: Tự huấn luyện (Train) mô hình
-1. Mở file `hoanggiamanh-nhom21-detectedfaceandclassification.ipynb` bằng Jupyter Notebook hoặc Google Colab.
+1. Mở file `detectedfaceandclassification.ipynb` bằng Jupyter Notebook hoặc Google Colab.
 2. Chuẩn bị dataset (chia thư mục `with_mask` và `without_mask`).
 3. Chạy toàn bộ các ô lệnh (cells) trong Notebook để tiến hành huấn luyện.
 4. Sau khi huấn luyện hoàn tất, chạy file `save_models.py` hoặc các ô lệnh lưu model cuối cùng để xuất ra các file `.h5` và `.pkl`.
