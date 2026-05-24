@@ -1,0 +1,8 @@
+gradio>=4.0.0
+opencv-python
+numpy
+scikit-learn
+scikit-image
+joblib
+# tensorflow  # Uncomment nếu muốn dùng CNN model
+# dlib        # Uncomment nếu muốn dùng HOG face detector
